@@ -115,6 +115,8 @@ import category from './objects/blogs/category'
 
 // block content
 import blockContent from './blocks/blockContent'
+import customBlock from './blocks/customBlock'
+import richText from './blocks/richText'
 
 export const schemaTypes = [
   // document types
@@ -237,4 +239,6 @@ export const schemaTypes = [
   flyercta,
   // block content
   blockContent,
+  customBlock,
+  richText
 ]

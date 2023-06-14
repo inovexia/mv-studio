@@ -1,4 +1,4 @@
-import { MdChromeReaderMode as icon } from 'react-icons/md';
+import {MdChromeReaderMode as icon} from 'react-icons/md'
 export default {
   name: 'blog',
   type: 'document',
@@ -17,53 +17,50 @@ export default {
       options: {
         source: 'title',
         maxLength: 200,
-      }
+      },
     },
     {
       title: 'Published At',
       name: 'publishedAt',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
-      title: 'Description', 
+      title: 'Description',
       name: 'content',
-      type: 'blockContent' 
+      type: 'richText',
     },
     {
-      title: 'Excerpt', 
+      title: 'Excerpt',
       name: 'excerpt',
-      type: 'blockContent' 
+      type: 'richText',
     },
     {
-      title: 'SEO Description', 
+      title: 'SEO Description',
       name: 'seoDescription',
-      type: 'blockContent' 
+      type: 'richText',
     },
     {
       title: 'featured Image',
       name: 'image',
       type: 'image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
-
-    
-     
+    {
+      name: 'blogcategory',
+      title: 'Category',
+      type: 'reference',
+      to: [
         {
-          name: 'blogcategory',
-          title: 'Category',
-          type: 'reference',
-          to: [
-            {
-              type:'blogCategory'
-            }
-          ]
+          type: 'blogCategory',
         },
+      ],
+    },
     {
       title: 'Author',
       name: 'author',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'tags',
@@ -72,12 +69,11 @@ export default {
       of: [
         {
           type: 'string',
-        }
-      ]
+        },
+      ],
     },
-
   ],
   preview: {
-    select: { title: 'title', media: 'image' },
+    select: {title: 'title', media: 'image'},
   },
-};
+}
