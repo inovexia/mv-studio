@@ -62,7 +62,6 @@ export default defineConfig({
     productionUrl: async (prev, context) => {
       // context includes the client and other details
       const { getClient, dataset, document } = context
-      // console.log(document.handle)
       const client = getClient({ apiVersion: '2023-02-07' })
       if (document && document._type === 'blog') {
         // const slug = await client.fetch(
@@ -74,13 +73,14 @@ export default defineConfig({
           const params = new URLSearchParams()
         params.set('preview', 'true')
         params.set('dataset', dataset)
+        params.set('documentId', document._id)
         return `https://mvstaging.gatsbyjs.io/blog/${slug}?${params}`
         }
         return prev
       }
 
       
-    },
+    }
   },
   schema: {
     types: schemaTypes,
