@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@portabletext/toolkit": "^2.0.1",
+    "@sanity/code-input": "^4.1.1",
     "@sanity/icons": "^2.2.2",
     "@sanity/ui": "^1.2.2",
     "@sanity/vision": "^3.11.3",
@@ -27,6 +28,7 @@
     "react-icons": "^4.8.0",
     "react-is": "^18.2.0",
     "sanity": "^3.11.3",
+    "sanity-plugin-iframe-pane": "^2.3.1",
     "sanity-plugin-shopify-assets": "^1.1.0",
     "styled-components": "^5.3.9"
   },
